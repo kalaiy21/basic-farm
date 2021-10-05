@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Rosario:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: .3% 3%;
+  z-index: 5;
+  transition: ease-in-out .3s;
+}
+
+#navbar .logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+#navbar .nav-list ul {
+  display: flex;
+}
+
+#navbar .nav-list ul li {
+  list-style: none;
+}
+
+#navbar .nav-list ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 1rem;
+}
+
+#navbar .nav-list ul li + li {
+  margin-left: 2rem;
+}
+
+#hero {
+  position: relative;
+}
+
+#hero video {
+  width: 100vw;
+  height: 105vh;
+  object-fit: cover;
+}
+
+#hero .hero-content {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero .hero-content h1 {
+  color: white;
+  font-style: "Rosario", sans-serif;
+  font-weight: 400;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 4rem;
+  font-size: 3.5rem;
+}
+
+#hero .hero-content a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  background-color: #63bd77;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  padding: .7rem 2rem;
+  border-radius: 30px;
+  color: white;
+}
+
+#services .products-title {
+  margin-bottom: 2rem;
+}
+
+#services .products-title h1 {
+  text-align: center;
+  margin: 5rem 0 .5rem;
+  font-family: "Rosario", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #080808;
+}
+
+#services .products-title hr {
+  width: 10%;
+  height: 5px;
+  border-radius: 20px;
+  margin: 0 auto 3rem;
+  background-color: #1f1f1f;
+}
+
+#services .products-title p {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #313131;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#services .cards {
+  padding: 3rem 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#services .cards .card + .card {
+  margin-left: 2rem;
+}
+
+#services .cards .card {
+  width: 22.5rem;
+  height: 29rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  transition: ease-in-out .3s;
+}
+
+#services .cards .card .dec-div div {
+  transition: ease-in-out .3s;
+  background-color: white;
+  margin: 0 auto 2rem;
+  width: 8rem;
+  height: .5rem;
+  border-radius: 0 0 10px 10px;
+}
+
+#services .cards .card .card-img {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#services .cards .card .card-img img {
+  width: 100px;
+  height: 100px;
+}
+
+#services .cards .card .card-content h3 {
+  font-size: 2.5rem;
+  font-family: "Rosario", sans-serif;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #252525;
+}
+
+#services .cards .card .card-content p {
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: .5px;
+  display: inline;
+  line-height: 1.5rem;
+  color: #3d3d3d;
+}
+
+#services .cards .card .browse {
+  position: absolute;
+  bottom: 7%;
+  width: 90%;
+  text-align: center;
+}
+
+#services .cards .card .browse a {
+  text-decoration: none;
+  font-family: "Rosario", sans-serif;
+  letter-spacing: 1px;
+  color: #63bd77;
+}
+
+#services .cards .card:hover {
+  box-shadow: 1px 3px 33px 10px rgba(0, 0, 0, 0.16);
+  transition: ease-in-out .3s;
+}
+
+#services .cards .card:hover .dec-div div {
+  transition: ease-in-out .3s;
+  background-color: #48da82;
+}
+
+#farm-mct {
+  display: flex;
+}
+
+#farm-mct .robo-img {
+  width: 100%;
+  height: 75vh;
+}
+
+#farm-mct .robo-img img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+#farm-mct .mct-content {
+  background-color: #d0fcda;
+  color: #007A31;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#farm-mct .mct-content .title {
+  font-family: "Rosario", sans-serif;
+  margin-bottom: 2rem;
+}
+
+#farm-mct .mct-content .title p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: .4rem;
+}
+
+#farm-mct .mct-content .title h1 {
+  font-weight: 500;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+
+#farm-mct .mct-content .content {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+}
+
+#farm-mct .mct-content .content p {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+
+#farm-mct .mct-content .content a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  background-color: #007A31;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  padding: .7rem 2rem;
+  border-radius: 10px;
+  color: white;
+}
+
+#youtube {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5% 9%;
+}
+
+#youtube .watch-title {
+  width: 30%;
+}
+
+#youtube .watch-title h1 {
+  font-family: "Rosario", sans-serif;
+  color: #007A31;
+  font-size: 3rem;
+}
+
+#youtube .youtube-video {
+  width: 50vw;
+  height: 55vh;
+  overflow-y: hidden;
+}
+
+#youtube .youtube-video iframe {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=index.css.map */
