@@ -1,22 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Rosario:wght@300;400;500;600;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Rosario:wght@300;400;500;600;700&display=swap");
 #navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
-  padding: .3% 3%;
+  padding: .5% 2%;
   z-index: 5;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 #navbar .logo img {
@@ -36,7 +29,7 @@
 #navbar .nav-list ul li a {
   text-decoration: none;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Rosario", sans-serif;
   font-weight: 500;
   letter-spacing: 3px;
   font-size: 1rem;
@@ -44,6 +37,87 @@
 
 #navbar .nav-list ul li + li {
   margin-left: 2rem;
+}
+
+.ham-menu {
+  display: none;
+}
+
+.ham-menu span {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.pnav-list {
+  background-color: yellowgreen;
+  position: absolute;
+  left: 0;
+  top: -22rem;
+  width: 100%;
+  height: 40vh;
+  z-index: 50;
+  padding: 6% 3%;
+  border-radius: 0 0 20px 20px;
+  transition: ease-in-out .4s;
+  text-align: center;
+}
+
+.pnav-list .close-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pnav-list .close-menu span {
+  font-size: 2rem;
+  color: white;
+}
+
+.pnav-list ul {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pnav-list li + li {
+  margin-top: 1.3rem;
+}
+
+.pnav-list li {
+  list-style: none;
+}
+
+.pnav-list li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Rosario", sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 400px) {
+  #navbar {
+    padding: 4% 3%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-list {
+    display: none;
+  }
+  .ham-menu {
+    display: inline-block !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 #hero {
@@ -54,6 +128,7 @@
   width: 100vw;
   height: 105vh;
   object-fit: cover;
+  display: block;
 }
 
 #hero .hero-content {
@@ -78,10 +153,10 @@
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   background-color: #63bd77;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: 3px;
-  padding: .7rem 2rem;
-  border-radius: 30px;
+  padding: 0.7rem 2rem;
+  border-radius: 10px;
   color: white;
 }
 
@@ -91,12 +166,12 @@
 
 #services .products-title h1 {
   text-align: center;
-  margin: 5rem 0 .5rem;
+  margin: 5rem 0 0.5rem;
   font-family: "Rosario", sans-serif;
   font-size: 3.2rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #080808;
+  color: #63bd77;
 }
 
 #services .products-title hr {
@@ -132,15 +207,15 @@
   padding: 0 1rem;
   margin-bottom: 2rem;
   position: relative;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 #services .cards .card .dec-div div {
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
   background-color: white;
   margin: 0 auto 2rem;
   width: 8rem;
-  height: .5rem;
+  height: 0.5rem;
   border-radius: 0 0 10px 10px;
 }
 
@@ -166,7 +241,7 @@
 #services .cards .card .card-content p {
   font-size: 1.1rem;
   font-family: "Roboto", sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   display: inline;
   line-height: 1.5rem;
   color: #3d3d3d;
@@ -188,11 +263,11 @@
 
 #services .cards .card:hover {
   box-shadow: 1px 3px 33px 10px rgba(0, 0, 0, 0.16);
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 #services .cards .card:hover .dec-div div {
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
   background-color: #48da82;
 }
 
@@ -214,7 +289,7 @@
 
 #farm-mct .mct-content {
   background-color: #d0fcda;
-  color: #007A31;
+  color: #007a31;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -231,7 +306,7 @@
   font-weight: 300;
   font-size: 1.1rem;
   letter-spacing: 2px;
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 #farm-mct .mct-content .title h1 {
@@ -259,10 +334,10 @@
 #farm-mct .mct-content .content a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  background-color: #007A31;
+  background-color: #007a31;
   font-size: 1.1rem;
   letter-spacing: 3px;
-  padding: .7rem 2rem;
+  padding: 0.7rem 2rem;
   border-radius: 10px;
   color: white;
 }
@@ -280,7 +355,7 @@
 
 #youtube .watch-title h1 {
   font-family: "Rosario", sans-serif;
-  color: #007A31;
+  color: #007a31;
   font-size: 3rem;
 }
 
@@ -293,5 +368,113 @@
 #youtube .youtube-video iframe {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  #hero video {
+    height: 100vh;
+  }
+  #hero .hero-content h1 {
+    font-size: 1.5rem;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  #hero .hero-content a {
+    font-size: 1rem;
+  }
+  #services {
+    background-color: #d8fde0;
+  }
+  #services .products-title {
+    margin-bottom: 1rem;
+  }
+  #services .products-title h1 {
+    font-size: 1.8rem;
+    color: #007a31;
+  }
+  #services .products-title hr {
+    height: 2px;
+    width: 20%;
+    margin-bottom: 1.6rem;
+  }
+  #services .products-title p {
+    font-size: 1rem;
+    opacity: 70%;
+  }
+  #services .cards {
+    padding: 2rem;
+  }
+  #services .cards .card + .card {
+    margin-left: 0;
+  }
+  #services .cards .card {
+    height: 27rem;
+  }
+  #services .cards .card .dec-div div {
+    background-color: #d8fde0;
+  }
+  #services .cards .card .card-content h3 {
+    font-size: 2rem;
+  }
+  #services .cards .card .card-content p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    opacity: 80%;
+    letter-spacing: 1px;
+  }
+  #services .cards .card .browse {
+    bottom: 7%;
+  }
+  #farm-mct {
+    flex-direction: column;
+  }
+  #farm-mct .robo-img {
+    height: 45vh;
+  }
+  #farm-mct .mct-content {
+    padding: 2rem 0;
+    background-color: white;
+  }
+  #farm-mct .mct-content .title {
+    margin-bottom: 1rem;
+  }
+  #farm-mct .mct-content .title p {
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+    opacity: 70%;
+  }
+  #farm-mct .mct-content .title h1 {
+    font-size: 2rem;
+  }
+  #farm-mct .mct-content .content {
+    width: 90%;
+    text-align: center;
+  }
+  #farm-mct .mct-content .content p {
+    font-size: 0.9rem;
+    margin-bottom: 1.3rem;
+    opacity: 80%;
+  }
+  #farm-mct .mct-content .content a {
+    font-size: 1rem;
+    padding: 3% 6%;
+  }
+  #youtube {
+    flex-direction: column;
+    padding: 10% 0;
+    background-color: #d8fde0;
+  }
+  #youtube .watch-title {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  #youtube .watch-title h1 {
+    font-size: 2rem;
+  }
+  #youtube .youtube-video {
+    width: 80vw;
+    height: 25vh;
+  }
 }
 /*# sourceMappingURL=index.css.map */

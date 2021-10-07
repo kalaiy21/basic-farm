@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Rosario:wght@300;400;500;600;700&display=swap");
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: .3% 3%;
+  z-index: 5;
+  transition: ease-in-out .3s;
+}
+
+#navbar .logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+#navbar .nav-list .n-nav {
+  display: none;
+}
+
+#navbar .nav-list .n-nav li {
+  list-style: none;
+}
+
+#navbar .nav-list .n-nav li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 1rem;
+}
+
+#navbar .nav-list .n-nav li + li {
+  margin-left: 2rem;
+}
+
+.phone__nav {
+  display: none;
+}
+
+.phone__nav .menu__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 5;
+  overflow-x: hidden;
+}
+
+.phone__nav .menu__btn__burger {
+  width: 25px;
+  height: 2px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.phone__nav .menu__btn__burger::before,
+.phone__nav .menu__btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.phone__nav .menu__btn__burger::before {
+  transform: translateY(-7px);
+}
+
+.phone__nav .menu__btn__burger::after {
+  transform: translateY(7px);
+}
+
+.phone__nav .menu__btn.open .menu__btn__burger {
+  transform: translatex(-50px);
+  background: transparent;
+}
+
+.phone__nav .menu__btn.open .menu__btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.phone__nav .menu__btn.open .menu__btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.phone__nav .navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  width: 0;
+  background-color: #20202d;
+  box-shadow: 3px 0 20px black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone__nav .navbar .nav__links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.phone__nav .navbar .nav__links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.phone__nav .navbar .nav__links a + a {
+  margin-top: 2rem;
+}
+/*# sourceMappingURL=navbar.css.map */
